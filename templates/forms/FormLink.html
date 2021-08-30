@@ -1,0 +1,26 @@
+{% extends 'info/base.html' %}
+
+{% block semanticcs %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'Semantic/semantic.min.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+{% endblock semanticcs %}
+
+{% block content %}
+<div class="ui container">
+    {% include 'info/sidebar.html' %}
+    <br><br><br>
+    <div class="ui grid block">
+        <div class="fourteen wide column">
+            <h2 class="ui header">
+                <i class="plug icon"></i>
+                <div class="content">
+                    Uptime Guarantee
+                </div>
+            </h2>
+        </div>
+        <div class="two wide column">www</div>
+    </div>     
+        
+{% endblock content %}

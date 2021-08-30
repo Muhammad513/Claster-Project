@@ -1,0 +1,20 @@
+{% extends 'info/base.html' %}
+{% block semanticcs %}  
+{% load static %} 
+<link rel="stylesheet" href="{% static 'Semantic/semantic.min.css' %}">
+{% endblock semanticcs %}
+
+{% block content %}
+{% include 'info/sidebar.html' %}
+<div class="ui container">
+    <h2 class="ui header center aligned">
+        Account Settings
+        <div class="sub header">Manage your account settings and set e-mail preferences.</div>
+    </h2>
+
+<br>
+
+<br><br>
+{% include 'info/table.html' %}
+</div>
+{% endblock content %}

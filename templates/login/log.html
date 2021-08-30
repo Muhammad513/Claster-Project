@@ -1,0 +1,40 @@
+{% extends 'info/base.html' %}
+{% block logincss %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock logincss %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="background-wrap">
+    <div class="background"></div>
+  </div>
+  <form id="accesspanel" action="/" method="POST">
+    {% csrf_token %}
+    <div class="logo">
+        <h1 id="litheader">Т Е Т Р А Т Е Х
+          <img src="https://img.icons8.com/color/48/000000/cotton.png" width="20px" class="m-1" />
+        </h1>
+    </div>
+    <div class="inset">
+      <p>
+        {{form.username}}
+      </p>
+      <p>
+        {{form.password}}
+      </p>
+      <div style="text-align: center;">
+        <div class="checkboxouter">
+          <span>{{msg}}</span>  
+        </div>
+        
+      </div>
+      <input class="loginLoginValue" type="hidden" name="service" value="login" />
+    </div>
+    <p class="p-container">
+      <input type="submit" name="Login" id="go" value="К И Р И Ш">
+    </p>
+  </form>
+  <script src="../../static/javascripts/login.js"></script>
+{% endblock %}
